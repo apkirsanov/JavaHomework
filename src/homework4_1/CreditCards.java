@@ -1,0 +1,29 @@
+package homework4_1;
+/*
+Создать класс CreditCard c полями номер счета, текущая сумма на счету.
+Добавьте метод, который позволяет начислять сумму на кредитную карточку.
+Добавьте метод, который позволяет снимать с карточки некоторую сумму.
+Добавьте метод, который выводит текущую информацию о карточке. Напишите
+программу, которая создает три объекта класса CreditCard у которых заданы
+номер счета и начальная сумма.
+Тестовый сценарий для проверки: Положите деньги на первые две карточки и
+снимите с третьей. Выведите на экран текущее состояние всех трех карточек.
+ */
+public class CreditCards {
+    String cardNumber;
+    double cardBalance;
+    public CreditCards(String cardNumber, double cardBalance) {
+        this.cardNumber = cardNumber;
+        this.cardBalance = cardBalance;
+    }
+    public void withdrawMoney (double Balance) {
+        cardBalance -= Balance;
+    }
+    public void putMoney (double Balance) {
+        cardBalance += Balance;
+    }
+    public void printInfo() {
+        System.out.println("Номер счета: " + cardNumber);
+        System.out.println("Баланс счета: " + cardBalance);
+    }
+}
